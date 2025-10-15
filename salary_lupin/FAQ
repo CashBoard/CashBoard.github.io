@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>💰 월급루팡 Q&A</title>
+  <style>
+    :root {
+      --bg: #100F11;
+      --text: #ffffff;
+      --muted: #cfcfcf;
+      --card: #19181b;
+      --card-border: #2a292c;
+      --accent: #ffd54a;
+      --btn-bg: #2b2930;
+      --btn-bg-hover: #3a3840;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo",
+                   "Noto Sans KR", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+    h1 {
+      font-size: 28px;
+      line-height: 1.2;
+      margin: 0 0 8px;
+    }
+    .subtitle {
+      color: var(--muted);
+      margin-bottom: 24px;
+      font-size: 16px;
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid var(--card-border);
+      margin: 20px 0;
+    }
+    .faq-card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 18px 18px;
+      margin: 16px 0;
+    }
+    .q {
+      font-weight: 700;
+      margin: 0 0 8px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .q::before {
+      content: "Q.";
+      color: var(--accent);
+      font-weight: 800;
+    }
+    .a {
+      margin: 0;
+      color: var(--text);
+      opacity: 0.95;
+    }
+    .hint {
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .cta {
+      margin-top: 24px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: var(--btn-bg);
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      transition: background .2s ease;
+      border: 1px solid var(--card-border);
+    }
+    .cta:hover { background: var(--btn-bg-hover); }
+    .cta .stars { letter-spacing: 1px; }
+    /* 작은 화면 최적화 */
+    @media (max-width: 480px) {
+      h1 { font-size: 24px; }
+      .faq-card { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>💰 월급루팡 Q&amp;A</h1>
+    <p class="subtitle">💬 여러분께서 자주 궁금해하시는 내용들을 모아봤어요 😼</p>
+
+    <hr />
+
+    <!-- Q1 -->
+    <section class="faq-card">
+      <h3 class="q">캐시와 현금 비율이 왜 차이가 나나요?</h3>
+      <p class="a">
+        광고 시청의 대가로 <strong>직접 현금을 지급</strong>하는 것은 광고 정책 위반 소지가 있어요 ⚠️<br />
+        앱이 정지될 수 있기 때문에, <strong>게임 포인트처럼 우회 지급 방식</strong>을 사용하고 있습니다.<br />
+        이는 안전하게 서비스를 유지하면서도 여러분께 최대한의 보상을 드리기 위한 방식이에요 💸
+      </p>
+    </section>
+
+    <!-- Q2 -->
+    <section class="faq-card">
+      <h3 class="q">왜 고양이가 1시간씩 쉬어야 하나요?</h3>
+      <p class="a">
+        연속으로 광고를 시청하면 광고주 입장에서 ‘품질 낮은 시청자’로 인식되어 광고 단가가 떨어질 수 있어요 📉<br />
+        그럴 경우 광고를 아무리 봐도 0원이 나오는 상황이 생길 수 있죠.<br />
+        그래서 <strong>최적의 단가 유지</strong>와 <strong>최대 보상 제공</strong>을 위해 일정 시간마다 고양이가 쉬도록 설정했습니다.<br />
+        효율적인 보상을 드리기 위해 <span class="hint">시간이나 보상 횟수는 변동될 수 있습니다 ⏰</span>
+      </p>
+    </section>
+
+    <!-- Q3 -->
+    <section class="faq-card">
+      <h3 class="q">광고를 없앨 수 있나요?</h3>
+      <p class="a">
+        월급루팡은 <strong>광고 수익의 99%를 사용자에게 돌려드리는 구조</strong>입니다 🙌<br />
+        광고가 없다면 보상도 제공할 수 없어요.<br />
+        앞으로도 <strong>더 좋은 광고를 확보하고, 더 높은 보상을 드리기 위해</strong> 노력하겠습니다 💪
+      </p>
+    </section>
+
+    <!-- Q4 -->
+    <section class="faq-card">
+      <h3 class="q">현금 출금을 신청하면 언제 입금되나요?</h3>
+      <p class="a">
+        <strong>화요일~일요일</strong> 사이에 출금을 신청하신 경우,<br />
+        👉 <strong>다음 주 월요일에 일괄 입금</strong>됩니다.<br />
+        <span class="hint">(입금 시간은 은행별로 다를 수 있습니다.)</span>
+      </p>
+    </section>
+
+    <!-- Q5 -->
+    <section class="faq-card">
+      <h3 class="q">월급루팡은 누가 만들었나요?</h3>
+      <p class="a">
+        앱테크에 진심인 <strong>1인 개발자</strong>가 직접 사용하기 위해 만든 앱입니다.<br />
+        일반적인 회사와 같이 이익을 창출하지 않고 여러분과 함께 <strong>공정한 수익을 나누기 위해</strong> 운영 중이에요 💖
+      </p>
+      <a
+        class="cta"
+        href="https://play.google.com/store/apps/details?id=com.cashboard.salary_lupin"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="구글 플레이에서 별점 남기기"
+      >
+        <span class="stars">⭐️⭐️⭐️⭐️⭐️</span>
+        <span>별점 남기기</span> 🚀
+      </a>
+    </section>
+
+  </main>
+</body>
+</html>
