@@ -135,15 +135,17 @@
     body::before {
       content: "";
       position: fixed;
-      top: 10%;
-      right: -5%;
+      top: 10%;               /* 필요하면 30% 등으로 내려도 됨 */
+      left: 50%;              /* 기준점을 화면 중앙으로 이동 */
+      transform: translateX(-50%);  /* 실제 요소를 중앙 정렬 */
+    
       width: 380px;
       height: 380px;
-      background-image: url('app_icon.png'); /* Replace with actual icon */
+      background-image: url('app_icon.png');
       background-size: contain;
       background-repeat: no-repeat;
       opacity: 0.08;
-      transform: rotate(-10deg);
+    
       pointer-events: none;
       z-index: 0;
     }
@@ -212,7 +214,12 @@
   <section id="download" class="section">
     <h2>다운로드</h2>
     <p>지금 바로 월급루팡을 설치하고 고양이와 함께 월급을 받아보세요!</p>
-    <a class="download-btn" href="#">Google Play 다운로드</a>
+  
+    <a class="download-btn" 
+       href="https://play.google.com/store/apps/details?id=com.cashboard.salary_lupin" 
+       target="_blank">
+       Google Play 다운로드
+    </a>
   </section>
 
   <footer>
