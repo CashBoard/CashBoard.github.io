@@ -1,1 +1,227 @@
-hello
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>월급루팡 - 공식 홈페이지</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Pretendard", sans-serif;
+      background: #111;
+      color: #fff;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(0,0,0,0.4);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+      backdrop-filter: blur(6px);
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffca00;
+    }
+    nav a {
+      margin-left: 24px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+    }
+    .hero {
+      height: 100vh;
+      background: radial-gradient(circle at center, #222 0%, #000 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 46px;
+      font-weight: 800;
+      color: #ffca00;
+      margin-bottom: 16px;
+    }
+    .hero p {
+      max-width: 480px;
+      font-size: 18px;
+      line-height: 1.6;
+      opacity: 0.85;
+    }
+    .download-btn {
+      margin-top: 32px;
+      background: #ffca00;
+      color: #000;
+      padding: 14px 32px;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .section {
+      padding: 100px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 32px;
+      color: #ffca00;
+      margin-bottom: 20px;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .feature-box {
+      background: #1b1b1b;
+      border-radius: 14px;
+      padding: 30px;
+      text-align: center;
+      border: 1px solid #333;
+    }
+    .feature-box h3 {
+      color: #ffca00;
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+    footer {
+      margin-top: 80px;
+      padding: 40px;
+      background: #000;
+      text-align: center;
+      font-size: 14px;
+      opacity: 0.6;
+    }
+  </style>
+<style>
+    /* Falling coin animation */
+    @keyframes fall {
+      0% { transform: translateY(-100px) rotate(0deg); opacity: 0; }
+      20% { opacity: 1; }
+      100% { transform: translateY(120vh) rotate(360deg); opacity: 0; }
+    }
+    .coin {
+      position: absolute;
+      top: -50px;
+      width: 40px;
+      height: 40px;
+      background-image: url('coin.png'); /* placeholder - replace with actual coin asset */
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: fall linear infinite;
+      opacity: 0;
+      z-index: 1;
+    }
+    /* Multiple coins */
+    .coin:nth-child(1) { left: 5%; animation-duration: 3.5s; animation-delay: 0s; }
+    .coin:nth-child(2) { left: 20%; animation-duration: 4.2s; animation-delay: 1s; }
+    .coin:nth-child(3) { left: 40%; animation-duration: 3.8s; animation-delay: 0.5s; }
+    .coin:nth-child(4) { left: 60%; animation-duration: 4.5s; animation-delay: 1.8s; }
+    .coin:nth-child(5) { left: 80%; animation-duration: 3.2s; animation-delay: 0.3s; }
+
+    /* Background app icon watermark */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 10%;
+      right: -5%;
+      width: 380px;
+      height: 380px;
+      background-image: url('app_icon.png'); /* Replace with actual icon */
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.08;
+      transform: rotate(-10deg);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      header { padding: 16px 20px; }
+      nav a { margin-left: 14px; font-size: 14px; }
+      .hero h1 { font-size: 32px; }
+      .hero p { font-size: 15px; max-width: 90%; }
+      .download-btn { font-size: 16px; padding: 12px 26px; }
+      body::before { width: 250px; height: 250px; opacity: 0.06; top: 20%; right: -10%; }
+    }
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 26px; }
+      .hero p { font-size: 14px; }
+      .download-btn { font-size: 14px; padding: 10px 22px; }
+      body::before { width: 200px; height: 200px; opacity: 0.05; right: -15%; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Falling coins -->
+  <div class="coin"></div>
+  <div class="coin"></div>
+  <div class="coin"></div>
+  <div class="coin"></div>
+  <div class="coin"></div>
+  <header>
+    <div class="logo">월급루팡</div>
+    <nav>
+      <a href="#about">소개</a>
+      <a href="#features">기능</a>
+      <a href="#download">다운로드</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>고양이가 대신 벌어오는<br>방치형 앱테크</h1>
+    <p>월급루팡은 앱을 켜두기만 해도 루팡냥이가 캐시를 모아오는 자동 적립형 리워드 앱입니다. 지금 바로 소소한 수익을 시작해보세요.</p>
+    <a class="download-btn" href="#download">다운로드 하기</a>
+  </section>
+
+  <section id="about" class="section">
+    <h2>월급루팡이란?</h2>
+    <p>방치만 해도 캐시가 쌓이고, 광고 보상과 다양한 미션으로 더 많은 리워드를 받을 수 있는 캐시 적립 앱입니다. 모은 캐시는 실제 현금으로 교환할 수 있어요.</p>
+  </section>
+
+  <section id="features" class="section">
+    <h2>주요 기능</h2>
+    <div class="features">
+      <div class="feature-box">
+        <h3>자동 캐시 적립</h3>
+        <p>앱을 켜두기만 하면 귀여운 루팡냥이가 알아서 캐시를 모아옵니다.</p>
+      </div>
+      <div class="feature-box">
+        <h3>루팡 걷기(만보기)</h3>
+        <p>걸음 수만으로도 캐시가 적립됩니다. 건강 + 보상을 동시에!</p>
+      </div>
+      <div class="feature-box">
+        <h3>광고 리워드</h3>
+        <p>광고 시청 시 추가 캐시 지급. 효율적인 적립이 가능해요.</p>
+      </div>
+      <div class="feature-box">
+        <h3>현금 교환</h3>
+        <p>모은 캐시는 매주 월요일 통장으로 안전하게 입금됩니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="download" class="section">
+    <h2>다운로드</h2>
+    <p>지금 바로 월급루팡을 설치하고 소소한 수익을 시작하세요!</p>
+    <a class="download-btn" href="#">Google Play 다운로드</a>
+  </section>
+
+  <footer>
+    © 2025 월급루팡. All rights reserved.
+  </footer>
+</body>
+</html>
